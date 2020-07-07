@@ -1,0 +1,19 @@
+Insert into CUSTOMER
+   (ID, MSISDN, STATUS)
+ Values
+   (1, '111111111111111', 1);
+Insert into CUSTOMER
+   (ID, MSISDN, STATUS)
+ Values
+   (2, '222222222222222', 2);
+
+Insert into BALANCE
+   (ID, BALANCE_VALUE, BALANCE_DATE)
+ Values
+   (1, 1000, TO_DATE('06/29/2020 12:36:21', 'MM/DD/YYYY HH24:MI:SS'));
+Insert into BALANCE
+   (ID, BALANCE_VALUE, BALANCE_DATE)
+ Values
+   (2, 0, TO_DATE('06/29/2020 12:36:31', 'MM/DD/YYYY HH24:MI:SS'));
+
+COMMIT;

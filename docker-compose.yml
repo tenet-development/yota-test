@@ -1,0 +1,40 @@
+version: "3.1"
+services:
+  cs:
+    build: ./cs
+    restart: on-failure
+    environment:
+     - DB_USER=YOTA
+     - DB_PASSWORD=YOTA
+     - DB_HOST=10.67.192.12
+     - DB_PORT=1521
+     - DB_SERVICE=porridge
+     - PORT=3000
+    ports:
+      - "3000:3000"
+  pg: 
+    build: ./pg
+    restart: on-failure
+    environment:
+     - DB_USER=YOTA
+     - DB_PASSWORD=YOTA
+     - DB_HOST=10.67.192.12
+     - DB_PORT=1521
+     - DB_SERVICE=porridge
+     - PORT=4000
+     - CHECK_MODULE_URL=http://cs:3000
+    ports: 
+     - "4000:4000"
+  sql: 
+    build: 
+      context: ./sql
+      args: 
+        - USER=YOTA
+        - PASSWORD=YOTA
+        - HOST=10.67.192.12
+        - PORT=1521
+        - DB=porridge
+
+  
+
+

@@ -1,0 +1,30 @@
+.idea
+.vscode
+*.code-workspace
+
+# dependencies
+node_modules
+
+
+# tests
+/eslint-report
+/coverage
+/coverage
+__snapshots__
+
+# prod
+/dist
+
+# misc
+.DS_Store
+tags
+tags.lock
+tags.temp
+.vim
+.env
+*.docx
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
